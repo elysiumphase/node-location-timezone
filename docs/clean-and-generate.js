@@ -6,6 +6,7 @@
 
 const { writeFileSync } = require('fs');
 const clm = require('country-locale-map');
+const { stringify } = require('zipson');
 const countryIso2Codes = require('./country-iso2-codes');
 const countryIso3Codes = require('./country-iso3-codes');
 const countryCapitalsJson = require('./country-capitals.json');
@@ -35,14 +36,14 @@ const countryFormalNamesByCountryName = generateCountries();
 const countryNames = Object.keys(countryFormalNamesByCountryName);
 
 // NOTE: write states ansi
-writeFileSync(`${__dirname}/../src/data/states-ansi.json`, JSON.stringify(statesAnsi));
+writeFileSync(`${__dirname}/../src/data/states-ansi.json`, JSON.stringify({ data: stringify(statesAnsi) }));
 
 // NOTE: write ISO 3611-1 alpha-2 and alpha-3 codes files
-writeFileSync(`${__dirname}/../src/data/country-iso2-codes.json`, JSON.stringify(countryIso2Codes));
-writeFileSync(`${__dirname}/../src/data/country-iso3-codes.json`, JSON.stringify(countryIso3Codes));
+writeFileSync(`${__dirname}/../src/data/country-iso2-codes.json`, JSON.stringify({ data: stringify(countryIso2Codes) }));
+writeFileSync(`${__dirname}/../src/data/country-iso3-codes.json`, JSON.stringify({ data: stringify(countryIso3Codes) }));
 
 // NOTE: write timezones file
-writeFileSync(`${__dirname}/../src/data/timezones.json`, JSON.stringify(timezones));
+writeFileSync(`${__dirname}/../src/data/timezones.json`, JSON.stringify({ data: stringify(timezones) }));
 
 // NOTE: check every countries iso2 are listed in files
 const countryIso2CodesLocations = [...new Set(locationsJson.map((location) => location.countryIso2))];
@@ -338,14 +339,14 @@ countriesSorted.forEach((country) => {
 });
 
 // NOTE: write locations file
-writeFileSync(`${__dirname}/../src/data/locations.json`, JSON.stringify(locationsSortedByCountryAndCity));
+writeFileSync(`${__dirname}/../src/data/locations.json`, JSON.stringify({ data: stringify(locationsSortedByCountryAndCity) }));
 
 // NOTE: write countries capital file
-writeFileSync(`${__dirname}/../src/data/country-capitals.json`, JSON.stringify(countryCapitalsSortedByCountryAndCity));
+writeFileSync(`${__dirname}/../src/data/country-capitals.json`, JSON.stringify({ data: stringify(countryCapitalsSortedByCountryAndCity) }));
 
 // NOTE: write countries file
-writeFileSync(`${__dirname}/../src/data/countries.json`, JSON.stringify(countriesSortedByName));
+writeFileSync(`${__dirname}/../src/data/countries.json`, JSON.stringify({ data: stringify(countriesSortedByName) }));
 
 // NOTE: write country codes files
-writeFileSync(`${__dirname}/../src/data/country-iso2-by-iso3-codes.json`, JSON.stringify(countryIso2ByIso3Codes));
-writeFileSync(`${__dirname}/../src/data/country-iso3-by-iso2-codes.json`, JSON.stringify(countryIso3ByIso2Codes));
+writeFileSync(`${__dirname}/../src/data/country-iso2-by-iso3-codes.json`, JSON.stringify({ data: stringify(countryIso2ByIso3Codes) }));
+writeFileSync(`${__dirname}/../src/data/country-iso3-by-iso2-codes.json`, JSON.stringify({ data: stringify(countryIso3ByIso2Codes) }));

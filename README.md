@@ -64,12 +64,13 @@
 
 ## Presentation
 
-A zero-dependency minimalist library to get information about capitals, countries, locations (cities), states ANSI (USA) and get the timezone of a city, capital, coordinates, country, province or even state.
+A performant library to get information about capitals, countries, locations (cities), states ANSI (USA) and get the timezone of a city, capital, coordinates, country, province or even state.
 
 Inspired by [city-timezones](https://github.com/kevinroberts/city-timezones) and [countries-capitals](https://github.com/chgasparoto/countries-capitals).
 
 What differentiates this library from the ones mentioned above is:
 
+- data compressed using [zipson](https://github.com/jgranstrom/zipson)
 - its quality of data controlled and updated:
   - country names and list come from [the United Nations](https://unterm.un.org/unterm2/en/country) and [the World Factbook](https://www.cia.gov/the-world-factbook/)
   - all alpha-2 and alpha-3 ISO 3166-1 country codes are referenced and fixed from original data

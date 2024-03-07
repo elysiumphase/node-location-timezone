@@ -1,5 +1,8 @@
-import countryIso2Codes from './data/country-iso2-codes.json';
-import countryIso3Codes from './data/country-iso3-codes.json';
+import {
+  countryIso2Codes,
+  countryIso3Codes,
+} from './data';
+
 /**
  * @func exists Whether the specified value is not null, undefined or NaN.
  *

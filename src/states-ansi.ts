@@ -1,4 +1,4 @@
-import statesAnsi from './data/states-ansi.json';
+import { statesAnsi } from './data';
 import { hasLen, is, match } from './helpers';
 import { StateAnsi } from './interfaces';
 

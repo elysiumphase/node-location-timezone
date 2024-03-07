@@ -1,4 +1,4 @@
-import locations from './data/locations.json';
+import { locations } from './data';
 import {
   exists,
   is,
