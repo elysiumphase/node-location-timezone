@@ -1,0 +1,20 @@
+import { parse } from 'zipson';
+import countriesJson from './countries.json';
+import countryCapitalsJson from './country-capitals.json';
+import countryIso2ByIso3CodesJson from './country-iso2-by-iso3-codes.json';
+import countryIso2CodesJson from './country-iso2-codes.json';
+import countryIso3ByIso2CodesJson from './country-iso3-by-iso2-codes.json';
+import countryIso3CodesJson from './country-iso3-codes.json';
+import locationsJson from './locations.json';
+import statesAnsiJson from './states-ansi.json';
+import timezonesJson from './timezones.json';
+
+export const countries = parse(countriesJson.data);
+export const countryCapitals = parse(countryCapitalsJson.data);
+export const countryIso2ByIso3Codes = parse(countryIso2ByIso3CodesJson.data);
+export const countryIso2Codes = parse(countryIso2CodesJson.data);
+export const countryIso3ByIso2Codes = parse(countryIso3ByIso2CodesJson.data);
+export const countryIso3Codes = parse(countryIso3CodesJson.data);
+export const locations = parse(locationsJson.data);
+export const statesAnsi = parse(statesAnsiJson.data);
+export const timezones = parse(timezonesJson.data);

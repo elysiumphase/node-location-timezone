@@ -1,7 +1,9 @@
-import countries from './data/countries.json';
-import countryCapitals from './data/country-capitals.json';
-import locations from './data/locations.json';
-import timezones from './data/timezones.json';
+import {
+  countries,
+  countryCapitals,
+  locations,
+  timezones,
+} from './data';
 import {
   exists,
   is,

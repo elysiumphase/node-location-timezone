@@ -1,9 +1,11 @@
-import countries from './data/countries.json';
-import countryCapitals from './data/country-capitals.json';
-import countryIso2Codes from './data/country-iso2-codes.json';
-import countryIso2ByIso3Codes from './data/country-iso2-by-iso3-codes.json';
-import countryIso3Codes from './data/country-iso3-codes.json';
-import countryIso3ByIso2Codes from './data/country-iso3-by-iso2-codes.json';
+import {
+  countries,
+  countryCapitals,
+  countryIso2ByIso3Codes,
+  countryIso2Codes,
+  countryIso3ByIso2Codes,
+  countryIso3Codes,
+} from './data';
 import {
   is,
   isValidCountryIso,

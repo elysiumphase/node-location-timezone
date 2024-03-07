@@ -1,8 +1,8 @@
 {
   "name": "node-location-timezone",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": "Elysium Phase <hi@elysiumphase.com> (https://github.com/elysiumphase)",
-  "description": "A zero-dependency minimalist library to get information about capitals, countries, locations (cities), states ANSI (USA) and get the timezone of a city, capital, coordinates, country, province or even state",
+  "description": "A performant library to get information about capitals, countries, locations (cities), states ANSI (USA) and get the timezone of a city, capital, coordinates, country, province or even state",
   "bin": {},
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -36,7 +36,9 @@
     "province",
     "state"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "zipson": "0.2.12"
+  },
   "devDependencies": {
     "@types/jest": "^29.5.11",
     "@types/node": "^20.11.5",
