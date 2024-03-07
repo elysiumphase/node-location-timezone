@@ -1,0 +1,27 @@
+# Distribution directory
+dist
+
+# eslint cache
+.eslintcache
+
+# JetBrains
+.idea
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Mac
+*.DS_Store
+
+# Node
+node_modules/
+
+# npm
+.npm
+
+# Test
+test/node_modules/
